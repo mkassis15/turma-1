@@ -6,8 +6,8 @@ public class Calculadora {
         Double a = 5.0;
         Double b = 10.0;
 
-        Double r_adiciona = new Calculadora().adiciona(a,b);
-        System.out.println("O resultado da adição = " + r_adiciona);
+        Double adiciona = new Calculadora().adiciona(a,b);
+        System.out.println("O resultado da adição = " + adiciona);
 
         Double r_diminui = new Calculadora().diminui(a,b);
         System.out.println("O resultado da subtração = " + r_diminui);
