@@ -1,41 +1,74 @@
 package com.target.treinamento.turma;
 
+import java.util.Scanner;
+
 public class Calculadora {
-    public static void main (String[] args) {
+	public static void main(String[] args) {
 
-        Double a = 5.0;
-        Double b = 10.0;
+		Calculadora minhaCalculadora = new Calculadora();
 
-        Double adiciona = new Calculadora().adiciona(a,b);
-        System.out.println("O resultado da adição = " + adiciona);
+		Double a = minhaCalculadora.LeiaPrimeiraEntrada();
+		Double b = minhaCalculadora.LeiaSegundaEntrada();
+		Double c = minhaCalculadora.LeiaTerceiraEntrada();
+		Double resultado = 0.0;
+		
+		if (c.equals(1.1)) {
+			resultado = minhaCalculadora.adiciona(a, b);
+			
+		} else if (c.equals(1.2)){
+			resultado = minhaCalculadora.divide(a, b);
+		} else if (c.equals(1.3)) {
+			resultado = minhaCalculadora.diminui(a, b);
+		}else if (c.equals(1.4)) {
+			resultado = minhaCalculadora.multiplica(a, b);
+		}
 
-        Double r_diminui = new Calculadora().diminui(a,b);
-        System.out.println("O resultado da subtração = " + r_diminui);
+		System.out.println("o resultado foi:" +resultado);
 
-        Double r_divide = new Calculadora().divide(a,b);
-        System.out.println("O resultado da divisão = " +r_divide);
 
-        Double r_multiplica = new Calculadora().multiplica(a,b);
-        System.out.println("O resultado da multiplicação = " +r_multiplica);
-    }
+	}
+	
+	public Double adiciona(Double a, Double b) {
+		return (a+b);
+	}
 
-    private Double adiciona(Double a,Double b){
-        Double resultado = (a+b);
-        return(resultado);
-    }
+	public Double multiplica(Double a, Double b) {
+		return (a*b);
+	}
 
-    private Double diminui(Double a,Double b){
-        Double resultado = (a-b);
-        return(resultado);
-    }
+	public Double divide(Double a, Double b) {
+		return (a/b);
+	}
 
-    private Double divide(Double a,Double b){
-        Double resultado = (a/b);
-        return(resultado);
-    }
+	public Double diminui(Double a, Double b) {
+		return (a-b);
+	}
 
-    private Double multiplica(Double a,Double b){
-        Double resultado = (a*b);
-        return(resultado);
-    }
-}
+	private Double LeiaTerceiraEntrada() {
+		System.out.println("Informe a operação:");
+		return lerEntrada();
+	}
+
+	private Double LeiaSegundaEntrada() {
+		System.out.println("Informe o segundo número:");
+
+		return lerEntrada();
+	}
+	
+	private Double LeiaPrimeiraEntrada() {
+		System.out.println("Digite o primeiro valor:");
+
+
+		return lerEntrada();
+	}
+	 
+		
+	private Double lerEntrada() {
+		Scanner scanner = new Scanner(System.in);
+		
+		return scanner.nextDouble();
+	}
+
+	}
+
+
