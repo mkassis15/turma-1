@@ -64,10 +64,10 @@ public class Calculadora {
 	 
 		
 	private Double lerEntrada() {
-		Scanner scanner = new Scanner(System.in);
-		
+		Scanner scanner = new Scanner(System.in);		
 		return scanner.nextDouble();
 	}
+	
 
 	}
 
