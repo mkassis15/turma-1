@@ -15,6 +15,8 @@ public class Comissao {
 		Integer quant = minhaComissao.quantidadeVendida();
 		Double total = minhaCalculadora.multiplica(Double.valueOf(quant), valor);
 		Double resultado = minhaCalculadora.multiplica(total, 0.1);
+		System.out.println("A sua comissão é:" +resultado);
+
 	}
 
 
