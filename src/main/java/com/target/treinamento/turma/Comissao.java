@@ -7,8 +7,21 @@ public class Comissao {
 
 		Comissao minhaComissao = new Comissao();
 		Calculadora minhaCalculadora = new Calculadora();
-
 		
+		
+
+    //Exercicio: 
+		//1 = fazer a função revert string utilizando um laço de repetição.
+			//	2 = verificação se uma string é palíndromo. 
+
+		//private void minhaComissao() {
+		//Int soma = 0;
+		//While(soma < 10) {
+		//System.out.println(“Matheus” + soma);
+		//Soma = soma + 1;
+		//}
+		//}
+
 		Integer id = minhaComissao.numeroVendedor();
 		Integer cod = minhaComissao.codigoPeca();
 		Double valor = minhaComissao.valorPeca();
@@ -38,7 +51,6 @@ public class Comissao {
 	private Integer numeroVendedor() {
 		System.out.println("Informe o número do vendedor:");
 		return new Scanner(System.in).nextInt();
-		 
 	}
 	
 

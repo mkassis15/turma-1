@@ -18,6 +18,7 @@ public class Cotacao {
 		valor_real = String.valueOf(Double.valueOf(cotacao_dolar) * Double.valueOf(valor_dolar));
 
 		System.out.print("O Valor em reais é " + valor_real + "\n");
+		System.out.println(new StringBuilder("Targettrust").reverse().toString());
 	}
 
 }

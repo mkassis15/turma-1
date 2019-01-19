@@ -12,10 +12,9 @@ public class Calculadora {
 		Double c = minhaCalculadora.LeiaTerceiraEntrada();
 		Double resultado = 0.0;
 		
-		if (c.equals(1.1)) {
-			resultado = minhaCalculadora.adiciona(a, b);
-			
-		} else if (c.equals(1.2)){
+		
+		System.out.println("1.1".equals("1.1") ? a : b);
+		 if (c.equals(1.2)){
 			resultado = minhaCalculadora.divide(a, b);
 		} else if (c.equals(1.3)) {
 			resultado = minhaCalculadora.diminui(a, b);
@@ -24,6 +23,7 @@ public class Calculadora {
 		}
 
 		System.out.println("o resultado foi:" +resultado);
+		
 
 
 	}
