@@ -4,16 +4,11 @@ public class reverter {
 
 	public static void main(String[] args) {
 
-		for (int i = 0; i < 200; i++) {
-			if (i % 2 == 0) {
-				System.out.println("é par:" + i);
-			}
-		}
-
 		reverter palidromo = new reverter();
 
-		System.out.println(palidromo.isPalindromo("rafael"));
-		System.out.println(palidromo.isPalindromo("ovo"));
+		System.out.println(palidromo.isPalindromo("O123V-88O"));
+		System.out.println(palidromo.isPalindromo("OR1E22L1A22X"));
+		System.out.println(palidromo.isPalindromo("Matheus"));
 		System.out.println(palidromo.isPalindromo("socorram me subi no onibus em marrocos"));
 	}
 
@@ -27,7 +22,7 @@ public class reverter {
 	 */
 	private boolean isPalindromo(String valor) {
 
-		String novoValor = valor.replaceAll("\\s+", "");
+		String novoValor = valor.replaceAll("\\d+", "").replaceAll("-", "");
 
 		Integer inicio = 0, fim = novoValor.length();
 
@@ -40,25 +35,10 @@ public class reverter {
 			inicio = inicio + 1;
 			fim = fim - 1;
 		}
-
-		return true;
-	}
-
-	private boolean isPalindromo1(String valor) {
-
-		
-		for (Integer inicio = 0, fim = valor.length(); inicio < fim; inicio++, fim--) {
-			if (valor.charAt(inicio) != valor.charAt(fim - 1)) {
-				return false;
-			}
-
-		}
-
-		return true;
-
-	}
-
 	
 
+		return true;
+
 	}
 
+}
