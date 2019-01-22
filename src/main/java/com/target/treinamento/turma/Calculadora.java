@@ -63,7 +63,7 @@ public class Calculadora {
 	}
 	 
 		
-	private Double lerEntrada() {
+	public Double lerEntrada() {
 		Scanner scanner = new Scanner(System.in);		
 		return scanner.nextDouble();
 	}
