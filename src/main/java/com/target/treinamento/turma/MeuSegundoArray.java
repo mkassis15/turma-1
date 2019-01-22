@@ -15,12 +15,19 @@ public class MeuSegundoArray {
 		for (int i = 0; i < 10; i++) {
 			meuArray[i] = lerEntrada();
 		}
-
+		
+  
+		lerTodasEntradas(meuArray);
 		efetuaOperacao(meuArray);
 		imprimiNaTela(meuArray);
 
 	}
 
+	private void lerTodasEntradas(Double[] meuArray) {
+		for (int i = 0; i < 10; i++) {
+			meuArray[i] = lerEntrada();		
+	}
+	}
 	private void imprimiNaTela(Double[] meuArray) {
 		for (int i = 0; i < meuArray.length; i++) {
 			System.out.println(meuArray[i]);
